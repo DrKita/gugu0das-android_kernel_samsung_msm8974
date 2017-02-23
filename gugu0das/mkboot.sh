@@ -63,23 +63,50 @@ echo "Generating Cyanogenmod_13.0 Boot Image"
 cd $dir/Cyanogenmod_13.0
 echo -n "SEANDROIDENFORCE" >> boot.img;
 
+#
+# MIUI8 Kernel
+#
+
+# Create ramdisk.cpio.gz
+cd $dir/MIUI8/ramdisk
+find | cpio -o -H newc | gzip -9 > ramdisk.cpio.gz
+mv ramdisk.cpio.gz ../ramdisk.cpio.gz
+cd $dir
+
+# MIUI8 Value
+echo "Generating MIUI8 Boot Image"
+./mkbootimg --kernel "$dir/MIUI8/kernel" \
+--ramdisk "$dir/MIUI8/ramdisk.cpio.gz" \
+--dt "$dir/MIUI8/dt.img" \
+--cmdline "console=null androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x3F androidboot.bootdevice=msm_sdcc.1 androidboot.selinux=permissive" \
+--base 0x00000000 \
+--pagesize 2048 \
+--ramdisk_offset 0x02000000 \
+--tags_offset 0x01e00000 \
+--output $dir/MIUI8/boot.img
+cd $dir/MIUI8
+echo -n "SEANDROIDENFORCE" >> boot.img;
+
 # Move Kernel
 echo "Generating gugu0das Kernel Flashing File"
 cd $dir
 mv Cyanogenmod_13.0/boot.img gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-1/boot.img
 mv Touchwiz/boot.img gugu0das_kernel-NX_TW-M-jactivelteskt-Release-1/boot.img
+mv MIUI8/boot.img gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-1/boot.img
 
 # Compression
 cd $dir/gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-1
 zip -r gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-1.zip ./*
 cd $dir/gugu0das_kernel-NX_TW-M-jactivelteskt-Release-1
 zip -r gugu0das_kernel-NX_TW-M-jactivelteskt-Release-1.zip ./*
+cd $dir/gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-1
+zip -r gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-1.zip ./*
 
 # Move Kernel Flashing File
 cd $dir/gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-1
 mv gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-1.zip $kernel_dir/gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-1.zip
 cd $dir/gugu0das_kernel-NX_TW-M-jactivelteskt-Release-1
 mv gugu0das_kernel-NX_TW-M-jactivelteskt-Release-1.zip $kernel_dir/gugu0das_kernel-NX_TW-M-jactivelteskt-Release-1.zip
-
-
+cd $dir/gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-1
+mv gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-1.zip $kernel_dir/gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-1.zip
 

@@ -58,20 +58,20 @@ echo -n "SEANDROIDENFORCE" >> boot_klteeur.img;
 # Move Kernel
 echo "Generating gugu0das Kernel Flashing File"
 cd $dir
-mv Touchwiz/boot_kltekor.img gugu0das_kernel-NX_TW-M-kltekor-Release-1/boot.img
-mv Touchwiz/boot_klteeur.img gugu0das_kernel-NX_TW-M-klteeur-Release-1/boot.img
+mv Touchwiz/boot_kltekor.img gugu0das_kernel-NX_TW-M-kltekor-Release-2-BetaProgram_2017.03.08/boot.img
+mv Touchwiz/boot_klteeur.img gugu0das_kernel-NX_TW-M-klteeur-Release-2-BetaProgram_2017.03.08/boot.img
 
 # Compression
-cd $dir/gugu0das_kernel-NX_TW-M-kltekor-Release-1
-zip -r gugu0das_kernel-NX_TW-M-kltekor-Release-1.zip ./*
-cd $dir/gugu0das_kernel-NX_TW-M-klteeur-Release-1
-zip -r gugu0das_kernel-NX_TW-M-klteeur-Release-1.zip ./*
+cd $dir/gugu0das_kernel-NX_TW-M-kltekor-Release-2-BetaProgram_2017.03.08
+zip -r gugu0das_kernel-NX_TW-M-kltekor-Release-2-BetaProgram_2017.03.08.zip ./*
+cd $dir/gugu0das_kernel-NX_TW-M-klteeur-Release-2-BetaProgram_2017.03.08
+zip -r gugu0das_kernel-NX_TW-M-klteeur-Release-2-BetaProgram_2017.03.08.zip ./*
 
 # Move Kernel Flashing File
-cd $dir/gugu0das_kernel-NX_TW-M-kltekor-Release-1
-mv gugu0das_kernel-NX_TW-M-kltekor-Release-1.zip $kernel_dir/gugu0das_kernel-NX_TW-M-kltekor-Release-1.zip
-cd $dir/gugu0das_kernel-NX_TW-M-klteeur-Release-1
-mv gugu0das_kernel-NX_TW-M-klteeur-Release-1.zip $kernel_dir/gugu0das_kernel-NX_TW-M-klteeur-Release-1.zip
+cd $dir/gugu0das_kernel-NX_TW-M-kltekor-Release-2-BetaProgram_2017.03.08
+mv gugu0das_kernel-NX_TW-M-kltekor-Release-2-BetaProgram_2017.03.08.zip $kernel_dir/gugu0das_kernel-NX_TW-M-kltekor-Release-2-BetaProgram_2017.03.08.zip
+cd $dir/gugu0das_kernel-NX_TW-M-klteeur-Release-2-BetaProgram_2017.03.08
+mv gugu0das_kernel-NX_TW-M-klteeur-Release-2-BetaProgram_2017.03.08.zip $kernel_dir/gugu0das_kernel-NX_TW-M-klteeur-Release-2-BetaProgram_2017.03.08.zip
 
 
 

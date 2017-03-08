@@ -25,19 +25,19 @@ find | cpio -o -H newc | gzip -9 > ramdisk.cpio.gz
 mv ramdisk.cpio.gz ../ramdisk.cpio.gz
 cd $dir
 
-# Touchwiz klteskt Value
-echo "Generating Touchwiz klteskt Boot Image"
-./mkbootimg --kernel "$dir/Touchwiz/kernel_klteskt" \
+# Touchwiz kltekor Value
+echo "Generating Touchwiz kltekor Boot Image"
+./mkbootimg --kernel "$dir/Touchwiz/kernel_kltekor" \
 --ramdisk "$dir/Touchwiz/ramdisk.cpio.gz" \
---dt "$dir/Touchwiz/dt_klteskt.img" \
+--dt "$dir/Touchwiz/dt_kltekor.img" \
 --cmdline "console=null androidboot.hardware=qcom user_debug=23 msm_rtb.filter=0x37 ehci-hcd.park=3 androidboot.selinux=permissive" \
 --base 0x00000000 \
 --pagesize 2048 \
 --ramdisk_offset 0x02000000 \
 --tags_offset 0x01e00000 \
---output $dir/Touchwiz/boot_klteskt.img
+--output $dir/Touchwiz/boot_kltekor.img
 cd $dir/Touchwiz
-echo -n "SEANDROIDENFORCE" >> boot_klteskt.img;
+echo -n "SEANDROIDENFORCE" >> boot_kltekor.img;
 
 cd $dir
 
@@ -58,18 +58,18 @@ echo -n "SEANDROIDENFORCE" >> boot_klteeur.img;
 # Move Kernel
 echo "Generating gugu0das Kernel Flashing File"
 cd $dir
-mv Touchwiz/boot_klteskt.img gugu0das_kernel-NX_TW-M-klteskt-Release-1/boot.img
+mv Touchwiz/boot_kltekor.img gugu0das_kernel-NX_TW-M-kltekor-Release-1/boot.img
 mv Touchwiz/boot_klteeur.img gugu0das_kernel-NX_TW-M-klteeur-Release-1/boot.img
 
 # Compression
-cd $dir/gugu0das_kernel-NX_TW-M-klteskt-Release-1
-zip -r gugu0das_kernel-NX_TW-M-klteskt-Release-1.zip ./*
+cd $dir/gugu0das_kernel-NX_TW-M-kltekor-Release-1
+zip -r gugu0das_kernel-NX_TW-M-kltekor-Release-1.zip ./*
 cd $dir/gugu0das_kernel-NX_TW-M-klteeur-Release-1
 zip -r gugu0das_kernel-NX_TW-M-klteeur-Release-1.zip ./*
 
 # Move Kernel Flashing File
-cd $dir/gugu0das_kernel-NX_TW-M-klteskt-Release-1
-mv gugu0das_kernel-NX_TW-M-klteskt-Release-1.zip $kernel_dir/gugu0das_kernel-NX_TW-M-klteskt-Release-1.zip
+cd $dir/gugu0das_kernel-NX_TW-M-kltekor-Release-1
+mv gugu0das_kernel-NX_TW-M-kltekor-Release-1.zip $kernel_dir/gugu0das_kernel-NX_TW-M-kltekor-Release-1.zip
 cd $dir/gugu0das_kernel-NX_TW-M-klteeur-Release-1
 mv gugu0das_kernel-NX_TW-M-klteeur-Release-1.zip $kernel_dir/gugu0das_kernel-NX_TW-M-klteeur-Release-1.zip
 

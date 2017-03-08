@@ -9,9 +9,9 @@ rm -f gugu0das/Touchwiz/ramdisk.cpio.gz
 rm -f gugu0das/Touchwiz/boot.img
 rm -f gugu0das/MIUI8/ramdisk.cpio.gz
 rm -f gugu0das/MIUI8/boot.img
-rm -f gugu0das/gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-1/boot.img
-rm -f gugu0das/gugu0das_kernel-NX_TW-M-jactivelteskt-Release-1/boot.img
-rm -f gugu0das/gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-1/boot.img
-rm -f gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-1.zip
-rm -f gugu0das_kernel-NX_TW-M-jactivelteskt-Release-1.zip
-rm -f gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-1.zip
+rm -f gugu0das/gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-2-BetaProgram_2017.03.08/boot.img
+rm -f gugu0das/gugu0das_kernel-NX_TW-M-jactivelteskt-Release-2-BetaProgram_2017.03.08/boot.img
+rm -f gugu0das/gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-2-BetaProgram_2017.03.08/boot.img
+rm -f gugu0das_kernel-NX_CM-13.0-jactivelteskt-Release-2-BetaProgram_2017.03.08.zip
+rm -f gugu0das_kernel-NX_TW-M-jactivelteskt-Release-2-BetaProgram_2017.03.08.zip
+rm -f gugu0das_kernel-NX_MIUI8-M-jactivelteskt-Release-2-BetaProgram_2017.03.08.zip

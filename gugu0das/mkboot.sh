@@ -42,14 +42,14 @@ echo -n "SEANDROIDENFORCE" >> boot.img;
 # Move Kernel
 echo "Generating gugu0das Kernel Flashing File"
 cd $dir
-mv Cyanogenmod_13.0/boot.img gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.08/boot.img
+mv Cyanogenmod_13.0/boot.img gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.18/boot.img
 
 # Compression
-cd $dir/gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.08
-zip -r gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.08.zip ./*
+cd $dir/gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.18
+zip -r gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.18.zip ./*
 
 # Move Kernel Flashing File
-cd $dir/gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.08
-mv gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.08.zip $kernel_dir/gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.08.zip
+cd $dir/gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.18
+mv gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.18.zip $kernel_dir/gugu0das_kernel-NX_CM-13.0-ks01ltekor-Release-2-BetaProgram_2017.03.18.zip
 
 

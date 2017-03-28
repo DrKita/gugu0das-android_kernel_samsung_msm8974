@@ -42,12 +42,12 @@ echo -n "SEANDROIDENFORCE" >> boot.img;
 # Move Kernel
 echo "Generating gugu0das Kernel Flashing File"
 cd $dir
-mv Cyanogenmod_14.1/boot.img gugu0das_kernel-NX_CM-14.1-jactivelteskt-Release-2-BetaProgram_2017.03.24/boot.img
+mv Cyanogenmod_14.1/boot.img gugu0das_kernel-CM-14.1-jactivelteskt-Release-2/boot.img
 
 # Compression
-cd $dir/gugu0das_kernel-NX_CM-14.1-jactivelteskt-Release-2-BetaProgram_2017.03.24
-zip -r gugu0das_kernel-NX_CM-14.1-jactivelteskt-Release-2-BetaProgram_2017.03.24.zip ./*
+cd $dir/gugu0das_kernel-CM-14.1-jactivelteskt-Release-2
+zip -r gugu0das_kernel-CM-14.1-jactivelteskt-Release-2.zip ./*
 
 # Move Kernel Flashing File
-cd $dir/gugu0das_kernel-NX_CM-14.1-jactivelteskt-Release-2-BetaProgram_2017.03.24
-mv gugu0das_kernel-NX_CM-14.1-jactivelteskt-Release-2-BetaProgram_2017.03.24.zip $kernel_dir/gugu0das_kernel-NX_CM-14.1-jactivelteskt-Release-2-BetaProgram_2017.03.24.zip
+cd $dir/gugu0das_kernel-CM-14.1-jactivelteskt-Release-2
+mv gugu0das_kernel-CM-14.1-jactivelteskt-Release-2.zip $kernel_dir/gugu0das_kernel-CM-14.1-jactivelteskt-Release-2.zip

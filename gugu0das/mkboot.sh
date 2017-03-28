@@ -99,30 +99,30 @@ echo -n "SEANDROIDENFORCE" >> boot_hlteeur.img;
 # Move Kernel
 echo "Generating gugu0das Kernel Flashing File"
 cd $dir
-mv Cyanogenmod_13.0/boot_hltekor.img gugu0das_kernel-NX_CM-13.0-hltekor-Release-2-BetaProgram_2017.03.24/boot.img
-mv Touchwiz/boot_hltekor.img gugu0das_kernel-NX_TW-M-hltekor-Release-2-BetaProgram_2017.03.24/boot.img
+mv Cyanogenmod_13.0/boot_hltekor.img gugu0das_kernel-CM-13.0-hltekor-Release-2/boot.img
+mv Touchwiz/boot_hltekor.img gugu0das_kernel-TW-M-hltekor-Release-2/boot.img
 
-mv Cyanogenmod_13.0/boot_hlteeur.img gugu0das_kernel-NX_CM-13.0-hlteeur-Release-2-BetaProgram_2017.03.24/boot.img
-mv Touchwiz/boot_hlteeur.img gugu0das_kernel-NX_TW-M-hlteeur-Release-2-BetaProgram_2017.03.24/boot.img
+mv Cyanogenmod_13.0/boot_hlteeur.img gugu0das_kernel-CM-13.0-hlteeur-Release-2/boot.img
+mv Touchwiz/boot_hlteeur.img gugu0das_kernel-TW-M-hlteeur-Release-2/boot.img
 
 # Compression
-cd $dir/gugu0das_kernel-NX_CM-13.0-hltekor-Release-2-BetaProgram_2017.03.24
-zip -r gugu0das_kernel-NX_CM-13.0-hltekor-Release-2-BetaProgram_2017.03.24.zip ./*
-cd $dir/gugu0das_kernel-NX_TW-M-hltekor-Release-2-BetaProgram_2017.03.24
-zip -r gugu0das_kernel-NX_TW-M-hltekor-Release-2-BetaProgram_2017.03.24.zip ./*
+cd $dir/gugu0das_kernel-CM-13.0-hltekor-Release-2
+zip -r gugu0das_kernel-CM-13.0-hltekor-Release-2.zip ./*
+cd $dir/gugu0das_kernel-TW-M-hltekor-Release-2
+zip -r gugu0das_kernel-TW-M-hltekor-Release-2.zip ./*
 
-cd $dir/gugu0das_kernel-NX_CM-13.0-hlteeur-Release-2-BetaProgram_2017.03.24
-zip -r gugu0das_kernel-NX_CM-13.0-hlteeur-Release-2-BetaProgram_2017.03.24.zip ./*
-cd $dir/gugu0das_kernel-NX_TW-M-hlteeur-Release-2-BetaProgram_2017.03.24
-zip -r gugu0das_kernel-NX_TW-M-hlteeur-Release-2-BetaProgram_2017.03.24.zip ./*
+cd $dir/gugu0das_kernel-CM-13.0-hlteeur-Release-2
+zip -r gugu0das_kernel-CM-13.0-hlteeur-Release-2.zip ./*
+cd $dir/gugu0das_kernel-TW-M-hlteeur-Release-2
+zip -r gugu0das_kernel-TW-M-hlteeur-Release-2.zip ./*
 
 # Move Kernel Flashing File
-cd $dir/gugu0das_kernel-NX_CM-13.0-hltekor-Release-2-BetaProgram_2017.03.24
-mv gugu0das_kernel-NX_CM-13.0-hltekor-Release-2-BetaProgram_2017.03.24.zip $kernel_dir/gugu0das_kernel-NX_CM-13.0-hltekor-Release-2-BetaProgram_2017.03.24.zip
-cd $dir/gugu0das_kernel-NX_TW-M-hltekor-Release-2-BetaProgram_2017.03.24
-mv gugu0das_kernel-NX_TW-M-hltekor-Release-2-BetaProgram_2017.03.24.zip $kernel_dir/gugu0das_kernel-NX_TW-M-hltekor-Release-2-BetaProgram_2017.03.24.zip
+cd $dir/gugu0das_kernel-CM-13.0-hltekor-Release-2
+mv gugu0das_kernel-CM-13.0-hltekor-Release-2.zip $kernel_dir/gugu0das_kernel-CM-13.0-hltekor-Release-2.zip
+cd $dir/gugu0das_kernel-TW-M-hltekor-Release-2
+mv gugu0das_kernel-TW-M-hltekor-Release-2.zip $kernel_dir/gugu0das_kernel-TW-M-hltekor-Release-2.zip
 
-cd $dir/gugu0das_kernel-NX_CM-13.0-hlteeur-Release-2-BetaProgram_2017.03.24
-mv gugu0das_kernel-NX_CM-13.0-hlteeur-Release-2-BetaProgram_2017.03.24.zip $kernel_dir/gugu0das_kernel-NX_CM-13.0-hlteeur-Release-2-BetaProgram_2017.03.24.zip
-cd $dir/gugu0das_kernel-NX_TW-M-hlteeur-Release-2-BetaProgram_2017.03.24
-mv gugu0das_kernel-NX_TW-M-hlteeur-Release-2-BetaProgram_2017.03.24.zip $kernel_dir/gugu0das_kernel-NX_TW-M-hlteeur-Release-2-BetaProgram_2017.03.24.zip
+cd $dir/gugu0das_kernel-CM-13.0-hlteeur-Release-2
+mv gugu0das_kernel-CM-13.0-hlteeur-Release-2.zip $kernel_dir/gugu0das_kernel-CM-13.0-hlteeur-Release-2.zip
+cd $dir/gugu0das_kernel-TW-M-hlteeur-Release-2
+mv gugu0das_kernel-TW-M-hlteeur-Release-2.zip $kernel_dir/gugu0das_kernel-TW-M-hlteeur-Release-2.zip

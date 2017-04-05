@@ -58,17 +58,17 @@ echo -n "SEANDROIDENFORCE" >> boot_klteeur.img;
 # Move Kernel
 echo "Generating gugu0das Kernel Flashing File"
 cd $dir
-mv Touchwiz/boot_kltekor.img gugu0das_kernel-TW-M-kltekor-Release-2/boot.img
-mv Touchwiz/boot_klteeur.img gugu0das_kernel-TW-M-klteeur-Release-2/boot.img
+mv Touchwiz/boot_kltekor.img gugu0das_kernel-TW-M-kltekor-Release-2.1/boot.img
+mv Touchwiz/boot_klteeur.img gugu0das_kernel-TW-M-klteeur-Release-2.1/boot.img
 
 # Compression
-cd $dir/gugu0das_kernel-TW-M-kltekor-Release-2
-zip -r gugu0das_kernel-TW-M-kltekor-Release-2.zip ./*
-cd $dir/gugu0das_kernel-TW-M-klteeur-Release-2
-zip -r gugu0das_kernel-TW-M-klteeur-Release-2.zip ./*
+cd $dir/gugu0das_kernel-TW-M-kltekor-Release-2.1
+zip -r gugu0das_kernel-TW-M-kltekor-Release-2.1.zip ./*
+cd $dir/gugu0das_kernel-TW-M-klteeur-Release-2.1
+zip -r gugu0das_kernel-TW-M-klteeur-Release-2.1.zip ./*
 
 # Move Kernel Flashing File
-cd $dir/gugu0das_kernel-TW-M-kltekor-Release-2
-mv gugu0das_kernel-TW-M-kltekor-Release-2.zip $kernel_dir/gugu0das_kernel-TW-M-kltekor-Release-2.zip
-cd $dir/gugu0das_kernel-TW-M-klteeur-Release-2
-mv gugu0das_kernel-TW-M-klteeur-Release-2.zip $kernel_dir/gugu0das_kernel-TW-M-klteeur-Release-2.zip
+cd $dir/gugu0das_kernel-TW-M-kltekor-Release-2.1
+mv gugu0das_kernel-TW-M-kltekor-Release-2.1.zip $kernel_dir/gugu0das_kernel-TW-M-kltekor-Release-2.1.zip
+cd $dir/gugu0das_kernel-TW-M-klteeur-Release-2.1
+mv gugu0das_kernel-TW-M-klteeur-Release-2.1.zip $kernel_dir/gugu0das_kernel-TW-M-klteeur-Release-2.1.zip
